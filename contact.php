@@ -48,15 +48,9 @@
       }
 
       /* Styles you shouldn't keep as they are for displaying this base example only */
-      .content .span10,
+      .content,
       .content .span4 {
         min-height: 500px;
-      }
-      /* Give a quick and non-cross-browser friendly divider */
-      .content .span10 {
-        margin-left: 0;
-        padding-left: 19px;
-        border-left: 1px solid #eee;
       }
 
       .topbar .btn {
@@ -79,9 +73,9 @@
         <div class="container">
           <a class="brand" href="#">Biblioteca d'Atzeneta del Maestrat</a>
           <ul class="nav">
-            <li class="active"><a href=".">Inici</a></li>
+            <li><a href="./index.php">Inici</a></li>
             <li><a href="./search.php">Cerca Avançada</a></li>
-            <li><a href="./contact.php">Contacte</a></li>
+            <li class="active"><a href="./contact.php">Contacte</a></li>
           </ul>
         </div>
       </div>
@@ -91,21 +85,13 @@
 
       <div class="content">
         <div class="page-header">
-          <h1>Inici <small>Troba els llibres que tenim a la biblioteca</small></h1>
+          <h1>Contacte <small>Posa't en contacte amb nosaltres</small></h1>
         </div>
         <div class="row">
-          <div class="span4">
-            <h3 style="margin-bottom: 20px;">Cerca llibres</h3>
-            <form action="#" method="get">
-              <input name="search" class="span3" type="text" placeholder="nom, autor, etc." />
-              <input type="submit" value="Cerca" />
-            </form>
-          </div>
-          <div class="span10">
-            <h2>Resultats</h2>
-            <div style="padding: 20px;">
-            <p>No s'ha fer cap cerca.</p>
-            </div>
+          <div class="span14" style="padding: 0px 0px 0px 250px;">
+            <h3>Telèfon: 964370917</h3>
+            <h3>e-Mail: <a href="mailto:casalatzeneta@gmail.com">casalatzeneta@gmail.com</a></h3>
+            <h3>Web: <a href="http://casal.atzeneta.org">casal.atzeneta.org</a></h3>
           </div>
         </div>
       </div>
@@ -118,3 +104,4 @@
 
   </body>
 </html>
+

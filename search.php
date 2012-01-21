@@ -79,8 +79,8 @@
         <div class="container">
           <a class="brand" href="#">Biblioteca d'Atzeneta del Maestrat</a>
           <ul class="nav">
-            <li class="active"><a href=".">Inici</a></li>
-            <li><a href="./search.php">Cerca Avançada</a></li>
+            <li><a href="./index.php">Inici</a></li>
+            <li class="active"><a href="./search.php">Cerca Avançada</a></li>
             <li><a href="./contact.php">Contacte</a></li>
           </ul>
         </div>
@@ -91,7 +91,7 @@
 
       <div class="content">
         <div class="page-header">
-          <h1>Inici <small>Troba els llibres que tenim a la biblioteca</small></h1>
+          <h1>Cerca avançada <small>Cerca millor el teu llibre</small></h1>
         </div>
         <div class="row">
           <div class="span4">
@@ -118,3 +118,4 @@
 
   </body>
 </html>
+
