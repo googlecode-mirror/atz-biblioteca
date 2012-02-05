@@ -11,7 +11,7 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="twitter-bootstrap-5217131/bootstrap.min.css" rel="stylesheet">
+    <link href="atz-biblioteca/twitter-bootstrap-5217131/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
       /* Override some defaults */
       html, body {
@@ -48,10 +48,6 @@
       }
 
       /* Styles you shouldn't keep as they are for displaying this base example only */
-      .content,
-      .content .span4 {
-        min-height: 500px;
-      }
 
       .topbar .btn {
         border: 0;
@@ -73,7 +69,7 @@
         <div class="container">
           <a class="brand" href="#">Biblioteca d'Atzeneta del Maestrat</a>
           <ul class="nav">
-            <li><a href="./index.php">Inici</a></li>
+            <li><a href="./index.php">Cerca llibres</a></li>
             <li><a href="./search.php">Cerca Avançada</a></li>
             <li class="active"><a href="./contact.php">Contacte</a></li>
           </ul>
@@ -88,7 +84,7 @@
           <h1>Contacte <small>Posa't en contacte amb nosaltres</small></h1>
         </div>
         <div class="row">
-          <div class="span14" style="padding: 0px 0px 0px 250px;">
+          <div class="span14" style="padding-left: 30px;">
             <h3>Telèfon: 964370917</h3>
             <h3>e-Mail: <a href="mailto:casalatzeneta@gmail.com">casalatzeneta@gmail.com</a></h3>
             <h3>Web: <a href="http://casal.atzeneta.org">casal.atzeneta.org</a></h3>
@@ -97,7 +93,7 @@
       </div>
 
       <footer>
-        <p>&copy; Casal Popular d'Atzeneta del Maestrat</p>
+        <p>&copy; Comisió Cultural d'Atzeneta del Maestrat</p>
       </footer>
 
     </div> <!-- /container -->

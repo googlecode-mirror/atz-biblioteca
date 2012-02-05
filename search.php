@@ -11,7 +11,7 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="twitter-bootstrap-5217131/bootstrap.min.css" rel="stylesheet">
+    <link href="atz-biblioteca/twitter-bootstrap-5217131/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
       /* Override some defaults */
       html, body {
@@ -50,7 +50,7 @@
       /* Styles you shouldn't keep as they are for displaying this base example only */
       .content .span10,
       .content .span4 {
-        min-height: 500px;
+        min-height: 300px;
       }
       /* Give a quick and non-cross-browser friendly divider */
       .content .span10 {
@@ -79,7 +79,7 @@
         <div class="container">
           <a class="brand" href="#">Biblioteca d'Atzeneta del Maestrat</a>
           <ul class="nav">
-            <li><a href="./index.php">Inici</a></li>
+            <li><a href="./index.php">Cerca llibres</a></li>
             <li class="active"><a href="./search.php">Cerca Avançada</a></li>
             <li><a href="./contact.php">Contacte</a></li>
           </ul>
@@ -97,21 +97,26 @@
           <div class="span4">
             <h3 style="margin-bottom: 20px;">Cerca llibres</h3>
             <form action="#" method="get">
-              <input name="search" class="span3" type="text" placeholder="nom, autor, etc." />
-              <input type="submit" value="Cerca" />
+              <input name="nom" class="span3" style="width: 193px;margin:2px;" type="text" placeholder="nom" />
+              <input name="autor" class="span3" style="width: 193px;margin:2px;" type="text" placeholder="autor" />
+              <input name="idioma" class="span3" style="width: 193px;margin:2px;" type="text" placeholder="idioma" />
+              <input name="contingut" class="span3" style="width: 193px;margin:2px;" type="text" placeholder="contingut" />
+              <input name="editorial" class="span3" style="width: 193px;margin:2px;" type="text" placeholder="editorial" />
+              <input name="ISBN" class="span3" style="width: 193px;margin:2px;" type="text" placeholder="ISBN" />
+              <input type="submit" value="Cerca Avançada" />
             </form>
           </div>
           <div class="span10">
             <h2>Resultats</h2>
             <div style="padding: 20px;">
-            <p>No s'ha fer cap cerca.</p>
+            <p>No s'ha fet cap cerca.</p>
             </div>
           </div>
         </div>
       </div>
 
       <footer>
-        <p>&copy; Casal Popular d'Atzeneta del Maestrat</p>
+        <p>&copy; Comisió Cultural d'Atzeneta del Maestrat</p>
       </footer>
 
     </div> <!-- /container -->

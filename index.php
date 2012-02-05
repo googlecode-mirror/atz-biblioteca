@@ -11,7 +11,7 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="twitter-bootstrap-5217131/bootstrap.min.css" rel="stylesheet">
+    <link href="atz-biblioteca/twitter-bootstrap-5217131/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
       /* Override some defaults */
       html, body {
@@ -48,10 +48,12 @@
       }
 
       /* Styles you shouldn't keep as they are for displaying this base example only */
+      /*
       .content .span10,
       .content .span4 {
         min-height: 500px;
       }
+      */
       /* Give a quick and non-cross-browser friendly divider */
       .content .span10 {
         margin-left: 0;
@@ -79,7 +81,7 @@
         <div class="container">
           <a class="brand" href="#">Biblioteca d'Atzeneta del Maestrat</a>
           <ul class="nav">
-            <li class="active"><a href=".">Inici</a></li>
+            <li class="active"><a href=".">Cerca llibres</a></li>
             <li><a href="./search.php">Cerca Avançada</a></li>
             <li><a href="./contact.php">Contacte</a></li>
           </ul>
@@ -91,27 +93,32 @@
 
       <div class="content">
         <div class="page-header">
-          <h1>Inici <small>Troba els llibres que tenim a la biblioteca</small></h1>
+          <h1>Cerca llibres <small>Troba els llibres que tenim a la biblioteca</small></h1>
         </div>
         <div class="row">
           <div class="span4">
             <h3 style="margin-bottom: 20px;">Cerca llibres</h3>
             <form action="#" method="get">
-              <input name="search" class="span3" type="text" placeholder="nom, autor, etc." />
+              <input name="search" class="span3" type="text" placeholder="títol, autor, etc." />
               <input type="submit" value="Cerca" />
             </form>
           </div>
           <div class="span10">
             <h2>Resultats</h2>
             <div style="padding: 20px;">
-            <p>No s'ha fer cap cerca.</p>
+            <?require_once "sSimple.php"?>
+            <?if($search):?>
+              <?= $search;?>
+            <?else:?>
+              <p>No s'ha fet cap cerca.</p>
+            <?endif;?>
             </div>
           </div>
         </div>
       </div>
 
       <footer>
-        <p>&copy; Casal Popular d'Atzeneta del Maestrat</p>
+        <p>&copy; Comisió Cultural d'Atzeneta del Maestrat</p>
       </footer>
 
     </div> <!-- /container -->
