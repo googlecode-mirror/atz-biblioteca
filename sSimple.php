@@ -1,32 +1,16 @@
 <?
 require_once "bd.php";
 //require_once "llibre.php";
+$db=new DB();
 
 $search=false;
-if(isset($_GET['search'])){
+if(isset($_GET['search']) and $_GET['search']!=""){
   $s=$_GET['search'];
-  $search=Array();
-  foreach($bd->searchByName($s) as $result)
-    $search[]=$result;
-  foreach($bd->searchByAuthor($s) as $result)
-    $search[]=$result;
+  $books=Array();
+  foreach($db->getAllBooks($s) as $result)
+    if(preg_match("/$s/i",$result->title.$result->author))
+      $books[]=$result;
+
+  $search=true;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>

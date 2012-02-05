@@ -104,14 +104,28 @@
             </form>
           </div>
           <div class="span10">
-            <h2>Resultats</h2>
-            <div style="padding: 20px;">
-            <?require_once "sSimple.php"?>
-            <?if($search):?>
-              <?= $search;?>
-            <?else:?>
-              <p>No s'ha fet cap cerca.</p>
-            <?endif;?>
+            <h2 style="margin-left: -10px;">Resultats</h2>
+            <div>
+              <?require_once "sSimple.php"?>
+              <?if($search):?>
+                <h3 style="color: #777;"><?= count($books);?> Llibres trobats</h3>
+                <?foreach($books as $book):?>
+                  <div class="well" style="overflow:hidden;">
+                    <div style="width:420px;float:left;">
+                      <h2><?= $book->title;?></h2>
+                      <h5 style="color:#aaa;margin-top:-10px;"><?= $book->author;?></h5>
+                      <span class="label warning">Novela</span>
+                      <span class="label">Castellà</span>
+                    </div>
+                    <div style="float:right;width:80px;text-align: right;">
+                      <span style="position:relative;top:0px;right:0px;" class="label success">disponible</span>
+                      <span style="background-color: #33ccff;" class="label">NH-23</span>
+                    </div>
+                  </div>
+                <?endforeach;?>
+              <?else:?>
+                <p>No s'ha fet cap cerca.</p>
+              <?endif;?>
             </div>
           </div>
         </div>
