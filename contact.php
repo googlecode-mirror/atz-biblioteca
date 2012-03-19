@@ -70,7 +70,6 @@
           <a class="brand" href="#">Biblioteca d'Atzeneta del Maestrat</a>
           <ul class="nav">
             <li><a href="./index.php">Cerca llibres</a></li>
-            <li><a href="./search.php">Cerca Avançada</a></li>
             <li class="active"><a href="./contact.php">Contacte</a></li>
           </ul>
         </div>
@@ -84,11 +83,12 @@
           <h1>Contacte <small>Posa't en contacte amb nosaltres</small></h1>
         </div>
         <div class="row">
-          <div class="span14" style="padding-left: 30px;">
-            <h3>Telèfon: 964370917</h3>
-            <h3>e-Mail: <a href="mailto:casalatzeneta@gmail.com">casalatzeneta@gmail.com</a></h3>
-            <h3>Web: <a href="http://casal.atzeneta.org">casal.atzeneta.org</a></h3>
-          </div>
+          <table style="width:auto;margin:auto;">
+            <tr><td><h3>Horari d'opertura</h3></td><td><h3> <a href="#">Dissaptes (11-13) & (17-19)</a></h3></td></tr>
+            <tr><td><h3>Pàgina web</h3></td><td><h3> <a href="http://biblioteca.atzeneta.org">biblioteca.atzeneta.org</a></h3></td></tr>
+            <tr><td><h3>e-Mail</h3></td><td><h3> <a href="mailto:bibliotecatzeneta@gmail.com">bibliotecatzeneta@gmail.com</a></h3></td></tr>
+            <tr><td><h3>Telèfon</h3></td><td><h3> <a href="#">964370917</a></h3></td></tr>
+          </table>
         </div>
       </div>
 

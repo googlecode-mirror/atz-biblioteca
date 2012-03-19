@@ -1,3 +1,4 @@
+<?require_once "sSimple.php"?>
 <!DOCTYPE html>
 <html lang="ca">
   <head>
@@ -48,12 +49,10 @@
       }
 
       /* Styles you shouldn't keep as they are for displaying this base example only */
-      /*
       .content .span10,
       .content .span4 {
-        min-height: 500px;
+        min-height: 100px;
       }
-      */
       /* Give a quick and non-cross-browser friendly divider */
       .content .span10 {
         margin-left: 0;
@@ -82,7 +81,6 @@
           <a class="brand" href="#">Biblioteca d'Atzeneta del Maestrat</a>
           <ul class="nav">
             <li class="active"><a href=".">Cerca llibres</a></li>
-            <li><a href="./search.php">Cerca Avançada</a></li>
             <li><a href="./contact.php">Contacte</a></li>
           </ul>
         </div>
@@ -99,34 +97,26 @@
           <div class="span4">
             <h3 style="margin-bottom: 20px;">Cerca llibres</h3>
             <form action="#" method="get">
-              <input name="search" class="span3" type="text" placeholder="títol, autor, etc." />
+              <?if($search):?>
+                <input name="search" value="<?= $s;?>" class="span3" type="text" placeholder="títol, autor, etc." />
+              <?else:?>
+                <input name="search" class="span3" type="text" placeholder="títol, autor, etc." />
+              <?endif;?>
               <input type="submit" value="Cerca" />
             </form>
+            <strong><span style="color:red;">Horari:</span> Dissaptes (11-13) & (17-19)</strong>
           </div>
           <div class="span10">
-            <h2 style="margin-left: -10px;">Resultats</h2>
-            <div>
-              <?require_once "sSimple.php"?>
-              <?if($search):?>
-                <h3 style="color: #777;"><?= count($books);?> Llibres trobats</h3>
-                <?foreach($books as $book):?>
-                  <div class="well" style="overflow:hidden;">
-                    <div style="width:420px;float:left;">
-                      <h2><?= $book->title;?></h2>
-                      <h5 style="color:#aaa;margin-top:-10px;"><?= $book->author;?></h5>
-                      <span class="label warning">Novela</span>
-                      <span class="label">Castellà</span>
-                    </div>
-                    <div style="float:right;width:80px;text-align: right;">
-                      <span style="position:relative;top:0px;right:0px;" class="label success">disponible</span>
-                      <span style="background-color: #33ccff;" class="label">NH-23</span>
-                    </div>
-                  </div>
-                <?endforeach;?>
-              <?else:?>
+            <?if($search):?>
+              <h2 style="margin-left: -10px;">Resultats per a "<i style="color: red;"><?= $s;?></i>" </h2>
+              <h3 style="color: #777;"><?= count($books);?> Llibres trobats</h3>
+              <?foreach($books as $book)echo $book->show();?>
+            <?else:?>
+              <h2 style="margin-left: -10px;">Resultats </h2>
+              <div>
                 <p>No s'ha fet cap cerca.</p>
-              <?endif;?>
-            </div>
+              </div>
+            <?endif;?>
           </div>
         </div>
       </div>

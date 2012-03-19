@@ -1,3 +1,4 @@
+<?require_once "sAdvanced.php"?>
 <!DOCTYPE html>
 <html lang="ca">
   <head>
@@ -96,21 +97,26 @@
         <div class="row">
           <div class="span4">
             <h3 style="margin-bottom: 20px;">Cerca llibres</h3>
-            <form action="#" method="get">
-              <input name="nom" class="span3" style="width: 193px;margin:2px;" type="text" placeholder="nom" />
+            <form action="sAdvanced.php" method="get">
+              <input name="titol" class="span3" style="width: 193px;margin:2px;" type="text" placeholder="títol" />
               <input name="autor" class="span3" style="width: 193px;margin:2px;" type="text" placeholder="autor" />
-              <input name="idioma" class="span3" style="width: 193px;margin:2px;" type="text" placeholder="idioma" />
-              <input name="contingut" class="span3" style="width: 193px;margin:2px;" type="text" placeholder="contingut" />
-              <input name="editorial" class="span3" style="width: 193px;margin:2px;" type="text" placeholder="editorial" />
               <input name="ISBN" class="span3" style="width: 193px;margin:2px;" type="text" placeholder="ISBN" />
+              <input name="genere" class="span3" style="width: 193px;margin:2px;" type="text" placeholder="gènere" />
+              <input name="idioma" class="span3" style="width: 193px;margin:2px;" type="text" placeholder="idioma" />
               <input type="submit" value="Cerca Avançada" />
             </form>
           </div>
           <div class="span10">
-            <h2>Resultats</h2>
-            <div style="padding: 20px;">
-            <p>No s'ha fet cap cerca.</p>
-            </div>
+            <?if($search):?>
+              <h2 style="margin-left: -10px;">Resultats per a "<i style="color: red;"><?= $s;?></i>" </h2>
+              <h3 style="color: #777;"><?= count($books);?> Llibres trobats</h3>
+              <?foreach($books as $book)echo $book->show();?>
+            <?else:?>
+              <h2 style="margin-left: -10px;">Resultats </h2>
+              <div>
+                <p>No s'ha fet cap cerca.</p>
+              </div>
+            <?endif;?>
           </div>
         </div>
       </div>
