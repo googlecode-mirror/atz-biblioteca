@@ -1,14 +1,15 @@
 <?
 class Llibre{
   function Llibre($row){
+    $this->id=$row['copyid'];
     $this->title=$row['title'];
     $this->author=$row['author'];
-    $this->isbn=rand();
-    $this->weblink="http://books.google.com";
-    $this->genere="novela";
-    $this->available=rand()%3;
-    $this->location="NH-".rand()%50;
-    $this->lang="castellà";
+    $this->isbn=$row['title_remainder'];
+    $this->weblink=$row['responsibility_stmt']==''?'#':($row['responsibility_stmt'].'" target="_blank');
+    $this->genere=$row['description'];
+    $this->available=$row['status_cd']=='in';
+    $this->location=$row['copy_desc']==''?iniciales($this->genere).'-??':$row['copy_desc'];
+    $this->lang=$row['topic1'];
   }
   function show(){
     ?>
@@ -16,7 +17,7 @@ class Llibre{
         <div style="width:420px;float:left;">
           <h2><?= $this->title;?></h2>
           <h5 style="color:#aaa;margin-top:-10px;"><?= $this->author;?></h5>
-          <h6 style="color:#aaa;margin-top:-10px;"><a href="<?=$this->weblink;?>" target="_blank"><?=$this->isbn;?></a></h6>
+          <h6 style="color:#aaa;margin-top:-10px;"><a href="<?=$this->weblink;?>"><?=$this->isbn;?></a></h6>
           <span class="label warning"><?=$this->genere;?></span>
           <span class="label"><?=$this->lang;?></span>
         </div>

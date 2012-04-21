@@ -80,6 +80,7 @@
         <div class="container">
           <a class="brand" href="#">Biblioteca d'Atzeneta del Maestrat</a>
           <ul class="nav">
+            <li><a href="#">Inici</a></li>
             <li class="active"><a href=".">Cerca llibres</a></li>
             <li><a href="./contact.php">Contacte</a></li>
           </ul>
@@ -104,7 +105,7 @@
               <?endif;?>
               <input type="submit" value="Cerca" />
             </form>
-            <strong><span style="color:red;">Horari:</span> Dissaptes (11-13) & (17-19)</strong>
+            <em style="color:green;">Obert dissabtes de <strong>11-13</strong> i de <strong>17-19</strong></em>
           </div>
           <div class="span10">
             <?if($search):?>
@@ -122,7 +123,7 @@
       </div>
 
       <footer>
-        <p>&copy; Comisió Cultural d'Atzeneta del Maestrat</p>
+        <p>&copy; Comissió Cultural d'Atzeneta del Maestrat</p>
       </footer>
 
     </div> <!-- /container -->
